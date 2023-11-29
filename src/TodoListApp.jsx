@@ -54,7 +54,7 @@ export const TodoListApp = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.h1}>Todo list</h1>
+      <h1 className={styles.h1}>Todo list 2</h1>
       <div className={styles.topBarContainer}>
         <SortComponent isSort={isSortTodos} setSort={setSortTodos}/>
         <SearchComponent setSearchValue={setSearchValue}/>
