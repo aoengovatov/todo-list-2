@@ -5,12 +5,7 @@
   background: rgb(234, 230, 230);
   border-radius: 10px;
   margin-bottom: 5px;
-  transition: all 0.2s;
   justify-content: space-between;
-}
-
-.caseContainer:hover {
-  background: #e1daff;
 }
 
 .titleContainer {
@@ -20,6 +15,7 @@
 
 .buttonContainer {
   display: flex;
+  justify-content: end;
   align-items: center;
 }
 
@@ -52,8 +48,8 @@
   border: 1px solid #5838d9;
   background: transparent;
   color: #5838d9;
-  font-size: 12px;
-  padding: 4px 10px;
+  font-size: 13px;
+  padding: 6px 15px;
   margin-left: 5px;
   border-radius: 7px;
   cursor: pointer;

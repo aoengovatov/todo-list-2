@@ -25,27 +25,29 @@ export const CaseComponent = ({ deleteTodo, updateTodo, id, children }) => {
     }
 
     return (
-            <div className={styles.caseContainer}>
-                <div className={styles.titleContainer}>
-                    <div className={styles.label}></div>
-                    {isEdit ? (
-                        <input 
-                            type='text'
-                            value={updateValue} 
-                            className={styles.input} 
-                            onChange={onChangeInput}>
-                        </input>
-                    ) : (
-                        <div className={styles.title}>{children}</div>
-                    )}
-                </div>
-                <div className={styles.buttonContainer}>
+            <>
+                <div className={styles.caseContainer}>
+                        <div className={styles.titleContainer}>
+                            {isEdit ? (
+                                <input 
+                                    type='text'
+                                    value={updateValue} 
+                                    className={styles.input} 
+                                    onChange={onChangeInput}>
+                                </input>
+                            ) : (
+                                <div className={styles.title}>{children}</div>
+                            )}
+                        </div>
+                        
+                    </div>
+                    <div className={styles.buttonContainer}>
                     {isEdit ? (
                         <>
                             <button 
                                 className={styles.actionButton} 
                                 onClick={updateCase}>
-                                ОК
+                                Сохранить
                             </button>
                             <button 
                                 className={styles.actionButton} 
@@ -61,6 +63,6 @@ export const CaseComponent = ({ deleteTodo, updateTodo, id, children }) => {
                         </>
                     )}
                 </div>
-            </div>
+            </>
         )
 }

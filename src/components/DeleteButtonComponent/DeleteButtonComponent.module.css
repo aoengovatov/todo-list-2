@@ -1,23 +1,16 @@
 .deleteButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #c8c8c8;
-  border-radius: 100%;
-  padding: 5px;
-  margin-left: 3px;
+  color: #df29a4;
+  font-size: 14px;
+  padding: 4px 20px;
+  background: #fff;
+  border: 2px solid #df29a4;
+  border-radius: 8px;
+  margin-left: 5px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .deleteButton:hover {
-  background: rgb(255 176 176);
-}
-
-.deleteIcon {
-  width: 15px;
-  height: 15px;
-  background-image: url(/src/assets/delete.png);
-  background-size: cover;
-  opacity: 0.5;
+  background: #df29a4;
+  color: #f0e5e5;
 }

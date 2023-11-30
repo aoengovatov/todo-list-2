@@ -1,23 +1,16 @@
 .editButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #c8c8c8;
-  border-radius: 100%;
-  padding: 5px;
-  margin-left: 3px;
+  color: #5838d9;
+  font-size: 14px;
+  padding: 4px 20px;
+  background: #fff;
+  border: 2px solid #5838d9;
+  border-radius: 8px;
+  margin-left: 5px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .editButton:hover {
-  background: rgb(252 212 141);
-}
-
-.editIcon {
-  width: 15px;
-  height: 15px;
-  background-image: url(/src/assets/edit.png);
-  background-size: cover;
-  opacity: 0.5;
+  background: #4923e0;
+  color: #f0e5e5;
 }

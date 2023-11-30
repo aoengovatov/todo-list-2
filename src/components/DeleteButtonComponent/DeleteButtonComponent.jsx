@@ -4,7 +4,7 @@ export const DeleteButtonComponent = ({ deleteTodo, id }) => {
    
     return (
         <div className={styles.deleteButton} onClick={() => deleteTodo(id)}>
-            <div className={styles.deleteIcon}></div>
+            удалить
         </div>
     )
 }
