@@ -1,0 +1,33 @@
+.todoItemContainer {
+  display: flex;
+  padding: 10px;
+  padding-left: 14px;
+  background: rgb(234, 230, 230);
+  border-radius: 10px;
+  margin-bottom: 5px;
+  transition: all 0.2s;
+  cursor: pointer;
+  justify-content: left;
+}
+
+.todoItemContainer:hover {
+  background: #e1daff;
+}
+
+.titleContainer {
+  display: flex;
+  width: -webkit-fill-available;
+}
+
+.label {
+  align-self: center;
+  min-width: 5px;
+  min-height: 5px;
+  border-radius: 100%;
+  background: #5838d9;
+  margin-right: 7px;
+}
+
+.title {
+  font-size: 16px;
+}
