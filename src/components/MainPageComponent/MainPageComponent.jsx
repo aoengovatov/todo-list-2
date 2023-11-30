@@ -56,14 +56,18 @@ export const MainPageComponent = () => {
            (
               <TodoItemComponent 
                 key={id}  
-                id={id}>{name}
+                id={id}
+                to={`task/${id}`}>
+                  {name}
               </TodoItemComponent>
             )) : (
               todos.map(({id, name}) => 
               (
                 <TodoItemComponent  
                   key={id} 
-                  id={id}>{name}
+                  id={id}
+                  to={`task/${id}`}>
+                    {name}
                 </TodoItemComponent>
               )            
             ))

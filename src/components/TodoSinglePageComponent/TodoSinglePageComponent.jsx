@@ -1,15 +1,26 @@
 import styles from './TodoSinglePageComponent.module.css';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { useRequestGetTodoWithId } from '../../hooks';
-import { CaseComponent } from '../../components';
+import { 
+    useRequestGetTodoWithId,
+    useRequestDeleteTodo,
+    useRequestUpdateTodo
+} from '../../hooks';
+import { CaseComponent, NotFoundPageComponent } from '../../components';
 
 export const TodoSinglePageComponent = () => {
     const [refreshTodo, setRefreshTodo] = useState(false);
-    const {isLoading, todo} = useRequestGetTodoWithId(refreshTodo);
-    
+    const params = useParams();
+    const {isLoading, todo} = useRequestGetTodoWithId(params.id, refreshTodo);
+    const navigate = useNavigate();
+
+    if (!todo.id) {
+        return <NotFoundPageComponent>Такой задачи не найдено</NotFoundPageComponent>;
+    }
 
     const deleteTodo = (id) => {
         useRequestDeleteTodo(id, setRefreshTodo, refreshTodo);
+        return navigate('/');
       }
       
       const updateTodo = (id, name) => {
@@ -21,9 +32,9 @@ export const TodoSinglePageComponent = () => {
     return (
         <div className={styles.container}>
             <div className={styles.titleContainer}>
-                <div className={styles.backButton}>
+                <Link to={'/'} className={styles.backButton}>
                     <div className={styles.backIcon}></div>
-                </div>
+                </Link>
                 <h1 className={styles.h1}>Task</h1>
             </div>
             {isLoading ? (
