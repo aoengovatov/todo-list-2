@@ -32,9 +32,9 @@ export const TodoSinglePageComponent = () => {
     return (
         <div className={styles.container}>
             <div className={styles.titleContainer}>
-                <Link to={'/'} className={styles.backButton}>
+                <div className={styles.backButton} onClick={() => navigate(-1)}>
                     <div className={styles.backIcon}></div>
-                </Link>
+                </div>
                 <h1 className={styles.h1}>Task</h1>
             </div>
             {isLoading ? (
