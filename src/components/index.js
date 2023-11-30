@@ -7,3 +7,4 @@ export * from "./SortComponent";
 export * from "./MainPageComponent";
 export * from "./TodoItemComponent";
 export * from "./TodoSinglePageComponent";
+export * from "./NotFoundPageComponent";
