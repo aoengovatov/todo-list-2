@@ -41,6 +41,10 @@ export const MainPageComponent = () => {
         setTodosSearch(searchTodos);
     };
 
+    const cutName = (str) => {
+      return str.length > 83 ? `${str.slice(0, 83)}…` : str
+    }
+
     return (
         <div className={styles.container}>
           <h1 className={styles.h1}>Todo list 2</h1>
@@ -58,7 +62,7 @@ export const MainPageComponent = () => {
                 key={id}  
                 id={id}
                 to={`task/${id}`}>
-                  {name}
+                  {cutName(name)}
               </TodoItemComponent>
             )) : (
               todos.map(({id, name}) => 
@@ -67,7 +71,7 @@ export const MainPageComponent = () => {
                   key={id} 
                   id={id}
                   to={`task/${id}`}>
-                    {name}
+                    {cutName(name)}
                 </TodoItemComponent>
               )            
             ))
